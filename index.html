@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    
+<!--
+
+RRRRR   YY    YY   AA      NN     NN
+RR  RR   YY  YY   AAAA     NNNN   NN
+RRRRR     YYYY   AA  AA    NN NN  NN
+RR RR      YY   AAAAAAAA   NN  NN NN
+RR  RR     YY   AA    AA   NN   NNNN
+RR   RR    YY   AA    AA   NN     NN
+
+-->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rhymedesigns</title>
+    <meta name="description" content="Ryan Mercer rhymes and designs to improve your bottom line. Currently serving Montgomery County, MD with custom web and app design.">
+
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f918.png" type="image/png">
+
+    <link rel="stylesheet" href="css/foundation-flex.css" type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://use.typekit.net/ldk8kjb.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/flowtype.js"></script>
+    <script src="js/headroom.min.js"></script>
+    <script src="js/jQuery.headroom.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/animated-gradient.js"></script>
+
+  </head>
+  <body>
+    <div id="home">
+      <?php include 'include/nav.php';?>
+      <div class="limerick">
+        <div id="typed-strings">
+          <p>You've been searching all day and all night<br>
+            for someone to build your website.<br>
+            You're worn out and tired<br>
+            and want to say - Hired!<br>
+            Well, I'm vying to be your 'webwright.'</p>
+        </div>
+        <span id="typed"></span>
+      </div><!-- /.limerick -->
+      <div class="home-bottom">
+        <div class="arrow bounce">
+		      <a href="#intro">&#x21A1;</a>
+        </div>
+      </div><!-- /.home-bottom -->
+    </div><!-- /#home -->
+
+    <h1 class="intro-blurb" id="intro">I rhyme & design to<br />improve your bottom line.</h1>
+
+    <h2 class="section-title" id="services">Services</h2>
+
+    <div class="row services">
+      <div class="small-12 medium-4 columns wow fadeIn red">
+        <h3>Web</h3>
+        <p>
+        Creating websites<br />
+        that drive revenue and love;<br />
+        design and rhythm.<br />
+        </p>
+      </div>
+      <div class="small-12 medium-4 columns wow fadeIn orange">
+        <h3>App</h3>
+        <p>
+        Boost efficiency;<br />
+        developing business apps<br />
+        to streamline process.<br />
+        </p>      
+      </div>
+      <div class="small-12 medium-4 columns wow fadeIn green">
+        <h3>SEO</h3>
+        <p>
+        Getting you found by<br />
+        search engine optimizing.<br />
+        keywords + semantics.<br />
+        </p>
+      </div>
+    </div>
+
+    <h2 class="section-title" id="about">About</h2>
+
+    <div class="row about">
+      <div class="small-12 medium-6 columns">
+        <img src="ryan.jpg" class="desaturate" />
+      </div>
+      <div class="small-12 medium-6 columns">
+        <h3>Hi, I'm Ryan Mercer.<br />It's nice to meet you!</h3>
+        <p>I founded <em>rhymedesigns</em> in the Spring of 2016 in order to help businesses improve their online presence and increase their efficiency.</p>
+        <p>As an entrepreneur at heart, I understand the triumphs and heartaches of the work you do. I am more than a web designer and developer - I am your partner.</p>
+      </div>
+    </div>
+
+    <div class="row contact">
+      <div class="small-12 columns" style="text-align:center;">
+        <p style="font-size:20px;">ryangmercer@gmail.com<br/>443.285.1917<br/>
+        <a href="https://www.linkedin.com/in/rygramer/">linkedin</a> // <a href="https://twitter.com/RyGraMer">twitter</a></p>
+      </div>
+    </div>
+
+    <script>
+
+      try{Typekit.load({ async: true });}catch(e){}
+      $(function(){
+        $("#typed").typed({
+          stringsElement: $('#typed-strings'),
+          typeSpeed: 25,
+        });
+      });
+
+      $('body').flowtype({
+         minimum   : 500,
+         maximum   : 1200,
+         minFont   : 16,
+         maxFont   : 40,
+         fontRatio : 40
+      });
+
+      $("#sticker").headroom();
+      setInterval(updateGradient,10);
+
+          var fadeStart=0 // 0px scroll or less will equiv to 1 opacity
+          ,fadeUntil=500 // 500px scroll or more will equiv to 0 opacity
+          ,fading = $('.arrow')
+      ;
+
+      $(window).bind('scroll', function(){
+          var offset = $(document).scrollTop()
+              ,opacity=0
+          ;
+          if( offset<=fadeStart ){
+              opacity=1;
+          }else if( offset<=fadeUntil ){
+              opacity=1-offset/fadeUntil;
+          }
+          fading.css('opacity',opacity).html();
+      });
+
+      // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+
+      wow = new WOW(
+        {
+          animateClass: 'animated',
+          offset:       200
+        }
+      );
+      wow.init();
+
+    </script>
+
+  </body>
+</html>
