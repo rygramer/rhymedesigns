@@ -1,0 +1,394 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers
+------------*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1.25;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* fonts
+------------*/
+h1, h2, h3, h4, p, ol, ul, form {
+  font-family: 'adobe-caslon-pro', serif;
+}
+h1 {
+  font-size: 2em;
+  line-height: 1.25;
+}
+h2 {
+  font-size: 1.625em;
+  line-height: 1.15384615;
+}
+h3 {
+  font-size: 1.375em;
+  line-height: 1.13636364;
+}
+h4 {
+  font-size: 1.125em;
+  line-height: 1.11111111;
+}
+blockquote {
+  font-size: 1.25em;
+  line-height: 1.25;
+}
+p {
+  margin-bottom:1em
+}
+p a{
+color:#0a0a0a;
+}
+p a:hover{
+font-style:italic;
+color:inherit;
+}
+ol {
+  list-style-type: decimal;
+}
+li {
+margin-left:1em;
+}
+em{
+font-style:italic;
+}
+/* limerick
+------------*/
+.limerick{
+    font-family: 'adobe-caslon-pro', serif;
+    width:80%;
+    top:calc(50% - 70px);
+    left:50%;
+    position:absolute;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    float:left;
+}
+.limerick-rhymedesign{
+    font-style:italic;
+}
+/* typed cursor */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+/* home-top and bottom
+------------*/
+#home{
+  height:100vh;
+}
+.home-top, .home-bottom{
+  font-family: 'adobe-caslon-pro', serif;
+  text-align:center;
+}
+.home-top ul{
+  margin-top:0em;
+}
+.home-top ul li{
+  display:inline;
+  text-transform: lowercase;
+}
+.home-top ul li a{
+  color:#fff;
+}
+.logo{
+  margin: .5em;
+}
+.logo a{
+  font-size: 1.5em;
+  font-weight: 700; 
+  color:#fff;
+  line-height: 1.5;
+  margin: 2em;
+}
+.home-top{
+  position:fixed;    
+  z-index:2;
+  width:100%;
+  opacity:1;
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -ms-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+.headroom--top{
+  opacity:0;
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -ms-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+.home-bottom{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* arrow bounce
+------------*/
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+.bounce {
+  -moz-animation: bounce 2s infinite 16s;
+  -webkit-animation: bounce 2s infinite 16s;
+  animation: bounce 2s infinite 16s;
+}
+.arrow a {
+  font-size: 2em;
+  color:#0a0a0a;
+  line-height: 1.5;
+}
+.arrow a:hover {
+  color:#0a0a0a;
+}
+/* intro blurb
+------------*/
+.intro-blurb{
+  text-align: center;
+  padding:2em 0 0 0;
+}
+/* section titles
+------------*/
+.section-title{
+  text-transform: lowercase;    
+  text-align: center;
+  font-style:italic;
+  padding:2.5em 0 1em 0;
+}
+/* services & process & about
+------------*/
+.services h3, .process h3, .about h3{
+  text-transform: lowercase;
+  text-align: center;
+  padding:0 0 .75em 0;
+  -webkit-transition: color 10s linear 1s;
+  -moz-transition: color 10s linear 1s;
+  -ms-transition: color 10s linear 1s;
+  -o-transition: color 10s linear 1s;
+  transition: color 10s linear 1s;
+}
+.services p, .process p, .process p a{
+  text-transform: lowercase;
+  text-align: center;
+  padding:0 0 1em 0;
+  -webkit-transition: color 5s ease;
+  -moz-transition: color 5s ease;
+  -ms-transition: color 5s ease;
+  -o-transition: color 5s ease;
+  transition: color 5s ease;
+}
+.services .columns {
+  padding-left: 0;
+  padding-right: 0;
+}
+.red:hover h3, .red:hover p, .red:hover p a{
+  color: rgb(219, 57, 55);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+.orange:hover h3, .orange:hover p{
+  color: rgb(246, 98, 34);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+.yellow:hover h3, .yellow:hover p{
+  color: rgb(240,240,0);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+.green:hover h3, .green:hover p{
+  color: rgb(115, 219, 63);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+.blue:hover h3, .blue:hover p{
+  color: rgb(64, 164, 216);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+.purple:hover h3, .purple:hover p{
+  color: rgb(159, 101, 221);
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+/* animated
+------------*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+/* black and white image
+------------*/
+img.desaturate { 
+ -webkit-filter: grayscale(100%);
+ filter: grayscale(100%);
+ padding:.5em;
+ margin:0 0 1em 0;
+}
+img.desaturate:hover { 
+   -webkit-filter: grayscale(0%);
+   filter: grayscale(0%);
+}
+/* contact form
+------------*/
+input#name, input#email, textarea#message{
+  display:block;
+  width:100%;
+  margin:0 0 .5em 0;
+  padding:.5em;
+  border:1px solid #0a0a0a;
+  border-radius:0;
+  color:#fff;
+}
+.contact{
+  padding:0 0 1em 0;
+}
